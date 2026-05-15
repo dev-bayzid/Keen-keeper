@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </nav>
       {/* <hr className="w-full"/> */}
-      <div className="flex justify-between gap-60 text-gray-300 font-extralight border-t border-green-800">
+      <div className="flex justify-between gap-60 text-gray-300 font-light border-t border-green-800">
         <div className="py-2">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
         </div>
