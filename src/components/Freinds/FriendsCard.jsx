@@ -7,11 +7,11 @@ const FriendsCard = ({ friend }) => {
   };
   return (
     <div className="card bg-base-100 shadow-sm space-y-3">
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center py-2">
         <img
           src={picture}
           alt={name}
-          className="w-30 h-30 object-cover rounded-full"
+          className="w-20 h-20 object-cover rounded-full"
         />
       </div>
       <div className="card-body text-center">
@@ -28,7 +28,7 @@ const FriendsCard = ({ friend }) => {
           ))}
         </div>
         <div
-          className={`badge py-4 text-white font-bold rounded-2xl mx-auto ${statusColor[status]}`}
+          className={`badge py-3 text-white font-bold rounded-2xl mx-auto ${statusColor[status]}`}
         >
           {status}
         </div>
