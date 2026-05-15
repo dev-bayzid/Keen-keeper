@@ -1,8 +1,11 @@
-import Link from "next/link";
+"use client";
 
+import Link from "next/link";
 import { ChartLine, Clock3, House } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathName = usePathname();
   return (
     <div className=" bg-base-100 shadow-sm max-w-full">
       <div className="navbar container mx-auto">
@@ -15,24 +18,33 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <ul className="flex justify-between gap-8">
-              <Link href="/">
-                <button className="flex gap-1 items-center">
-                  <House className="w-3.75 h-3.75"></House> Home
-                </button>
-              </Link>
-              <Link href="/timeline">
-                <button className="flex gap-1 items-center">
-                  <Clock3 className="w-3.75 h-3.75"></Clock3> Timeline
-                </button>
-              </Link>
-              <Link href="/stats">
-                <button className="flex gap-1 items-center">
-                  <ChartLine className="w-3.75 h-3.75"></ChartLine> Stats
-                </button>
-              </Link>
-            </ul>
+          <ul className="menu menu-horizontal px-1 flex justify-between gap-8 text-gray-500 font-semibold">
+            <Link
+              href="/"
+              className={`flex gap-1 items-center px-2 py-2 rounded-sm ${
+                pathName === "/" ? "bg-[#244D3F] text-white" : ""
+              }`}
+            >
+              <House className="w-3.75 h-3.75" /> Home
+            </Link>
+
+            <Link
+              href="/timeline"
+              className={`flex gap-1 items-center px-2 py-2 rounded-sm ${
+                pathName === "/timeline" ? "bg-[#244D3F] text-white" : ""
+              }`}
+            >
+              <Clock3 className="w-3.75 h-3.75" /> Timeline
+            </Link>
+
+            <Link
+              href="/stats"
+              className={`flex gap-1 items-center px-2 py-2 rounded-sm ${
+                pathName === "/stats" ? "bg-[#244D3F] text-white" : ""
+              }`}
+            >
+              <ChartLine className="w-3.75 h-3.75" /> Stats
+            </Link>
           </ul>
         </div>
       </div>
