@@ -158,7 +158,7 @@ export default function NotFound() {
                 →
               </motion.span>
 
-              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </Link>
           </motion.div>
 

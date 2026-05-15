@@ -1,4 +1,8 @@
-const HomePage = () => {
+const HomePage =  () => {
+  // const res = await fetch("/data/friends.json");
+  // const friends = await res.json();
+  // console.log(friends);
+
   return (
     <div className="min-h-screen py-20 bg-base-200 ">
       <div>
@@ -42,6 +46,10 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <h3>Your Friends</h3>
+        <div></div>
       </div>
     </div>
   );

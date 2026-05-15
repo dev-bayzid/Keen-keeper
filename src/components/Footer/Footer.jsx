@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-flow-col gap-4">
           <a>
             <Image
-              src="/instagram.png"
+              src="/assets/instagram.png"
               alt="Instagram"
               width={30}
               height={30}
@@ -25,16 +25,16 @@ const Footer = () => {
           </a>
           <a>
             <Image
-              src="/facebook.png"
-              alt="Instagram"
+              src="/assets/facebook.png"
+              alt="Facebook"
               width={30}
               height={30}
             ></Image>
           </a>
           <a>
             <Image
-              src="/twitter.png"
-              alt="Instagram"
+              src="/assets/twitter.png"
+              alt="Twitter"
               width={30}
               height={30}
             ></Image>
