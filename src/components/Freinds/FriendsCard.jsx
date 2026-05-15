@@ -1,5 +1,10 @@
 const FriendsCard = ({ friend }) => {
   const { name, picture, days_since_contact, tags, status } = friend;
+  const statusColor = {
+    "Overdue": "bg-red-500 ",
+    "On-Track": "bg-green-800 ",
+    "Almost Due": "bg-yellow-500",
+  };
   return (
     <div className="card bg-base-100 shadow-sm space-y-3">
       <div className="flex items-center justify-center">
@@ -10,8 +15,8 @@ const FriendsCard = ({ friend }) => {
         />
       </div>
       <div className="card-body text-center">
-        <p>{days_since_contact}</p>
-        <h2 className="">{name}</h2>
+        <h2 className="text-xl font-bold">{name}</h2>
+        <p className="text-gray-500 font-semibold">{days_since_contact}d ago</p>
         <div className="flex justify-center items-center">
           {tags.map((tag, ind) => (
             <div
@@ -21,6 +26,11 @@ const FriendsCard = ({ friend }) => {
               {tag}
             </div>
           ))}
+        </div>
+        <div
+          className={`badge py-4 text-white font-bold rounded-2xl mx-auto ${statusColor[status]}`}
+        >
+          {status}
         </div>
       </div>
     </div>
