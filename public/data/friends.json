@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Arif Hossain",
-    "picture": "https://example.com/photo1.jpg",
+    "picture": "https://i.ibb.co.com/M5p1WVzh/Arif-Hossain.jpg",
     "email": "arif@example.com",
     "days_since_contact": 12,
     "status": "overdue",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Omar Farooq",
-    "picture": "https://example.com/photo2.jpg",
+    "picture": "https://i.ibb.co.com/qFxMHggW/Omar-Farooq.avif",
     "email": "omar@example.com",
     "days_since_contact": 5,
     "status": "almost due",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Imran Hossain",
-    "picture": "https://example.com/photo3.jpg",
+    "picture": "https://i.ibb.co.com/nMSbDDNz/Imran-Hossain.avif",
     "email": "imran@example.com",
     "days_since_contact": 30,
     "status": "overdue",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "Fatima Rahman",
-    "picture": "https://example.com/photo4.jpg",
+    "picture": "https://i.ibb.co.com/spPvNNmx/Fatima-Rahman.webp",
     "email": "fatima@example.com",
     "days_since_contact": 2,
     "status": "on-track",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "name": "Yusuf Khan",
-    "picture": "https://example.com/photo5.jpg",
+    "picture": "https://i.ibb.co.com/kg0PXGJJ/Yusuf-Khan.avif",
     "email": "yusuf@example.com",
     "days_since_contact": 18,
     "status": "overdue",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Ayesha Siddiqui",
-    "picture": "https://example.com/photo6.jpg",
+    "picture": "https://i.ibb.co.com/20cW7Nwd/Ayesha-Siddiqui.jpg",
     "email": "ayesha@example.com",
     "days_since_contact": 9,
     "status": "almost due",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "name": "Zain Ali",
-    "picture": "https://example.com/photo7.jpg",
+    "picture": "https://i.ibb.co.com/99QQdW9d/Zain-Ali.jpg",
     "email": "zain@example.com",
     "days_since_contact": 1,
     "status": "on-track",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "name": "Hassan Mahmud",
-    "picture": "https://example.com/photo8.jpg",
+    "picture": "https://i.ibb.co.com/vxBxz5JW/Hassan-Mahmud.avif",
     "email": "hassan@example.com",
     "days_since_contact": 22,
     "status": "overdue",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "name": "Maryam Khan",
-    "picture": "https://example.com/photo9.jpg",
+    "picture": "https://i.ibb.co.com/ycdyzNZ8/Maryam-Khan.webp",
     "email": "maryam@example.com",
     "days_since_contact": 6,
     "status": "almost due",
@@ -110,7 +110,7 @@
   {
     "id": 10,
     "name": "Abdullah Rahim",
-    "picture": "https://example.com/photo10.jpg",
+    "picture": "https://i.ibb.co.com/Ps5pFfvv/Abdullah-Rahim.webp",
     "email": "abdullah@example.com",
     "days_since_contact": 14,
     "status": "overdue",

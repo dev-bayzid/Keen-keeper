@@ -1,3 +1,5 @@
+import FriendsCard from "@/components/Freinds/FriendsCard";
+
 const HomePage = async () => {
   const res = await fetch("http://localhost:3000/data/friends.json");
   const friends = await res.json();
@@ -49,8 +51,10 @@ const HomePage = async () => {
       </div>
       <div>
         <h3>Your Friends</h3>
-        <div>
-            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 container mx-auto">
+          {friends.map((friend) => (
+            <FriendsCard key={friend.id} friend={friend}></FriendsCard>
+          ))}
         </div>
       </div>
     </div>
