@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 import { ChartLine, Clock3, House } from "lucide-react";
 
 const Navbar = () => {
@@ -17,14 +17,20 @@ const Navbar = () => {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <ul className="flex justify-between gap-8">
-              <Link href="/" className="flex gap-1 items-center">
-                <House className="w-[15px] h-[15px]"></House> Home
+              <Link href="/">
+                <button className="flex gap-1 items-center">
+                  <House className="w-3.75 h-3.75"></House> Home
+                </button>
               </Link>
-              <Link href="/timeline" className="flex gap-1 items-center">
-                <Clock3 className="w-[15px] h-[15px]"></Clock3> Timeline
+              <Link href="/timeline">
+                <button className="flex gap-1 items-center">
+                  <Clock3 className="w-3.75 h-3.75"></Clock3> Timeline
+                </button>
               </Link>
-              <Link href="/stats" className="flex gap-1 items-center">
-                <ChartLine className="w-[15px] h-[15px]"></ChartLine> Stats
+              <Link href="/stats">
+                <button className="flex gap-1 items-center">
+                  <ChartLine className="w-3.75 h-3.75"></ChartLine> Stats
+                </button>
               </Link>
             </ul>
           </ul>
