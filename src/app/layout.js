@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TimelineProvider from "@/context/TimelineProvider";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,11 @@ export default function Layout({ children }) {
   return (
     <html lang="en">
       <body>
-        <TimelineProvider>{children}</TimelineProvider>
+        <TimelineProvider>
+          {children}
+
+          <ToastContainer position="top-center" theme="dark"></ToastContainer>
+        </TimelineProvider>
       </body>
     </html>
   );

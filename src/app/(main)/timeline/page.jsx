@@ -1,4 +1,12 @@
+"use client"
+import { TimelineContext } from "@/context/TimelineProvider";
+import { useContext } from "react";
+
 const TimelinePage = () => {
+
+  const {timelineFriends} = useContext(TimelineContext);
+  console.log(timelineFriends);
+
   return (
     <div className="min-h-screen bg-base-300 py-20">
       <div className="container mx-auto space-y-6">

@@ -10,7 +10,8 @@ import {
   Video,
 } from "lucide-react";
 import Link from "next/link";
-import { use, useState } from "react";
+import { use,useContext } from "react";
+import { TimelineContext } from "@/context/TimelineProvider";
 
 const FriendsDetailsPage = ({ params }) => {
   const friends = friendsData;
@@ -40,18 +41,7 @@ const FriendsDetailsPage = ({ params }) => {
     "Almost Due": "bg-yellow-500",
   };
 
-  const [timelineFriends, setTimelineFriend] = useState([]);
-  const [timeline, setTimeline] = useState([]);
-  const handleCallBtn = (friends) => {
-    console.log(friends);
-
-    const existedFriends = timelineFriends.find((fd) => fd.id === friends.id);
-
-    if (!existedFriends) {
-      alert("Call with A");
-      setTimelineFriend([timelineFriends, friends]);
-    }
-  };
+  const { handleCallBtn } = useContext(TimelineContext);
 
   return (
     <div className="min-h-screen  py-20 bg-base-300 ">
@@ -112,7 +102,7 @@ const FriendsDetailsPage = ({ params }) => {
         </div>
         <div className="right-section">
           <div className=" space-y-6">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               <div className="card w-50 shadow-sm text-center space-y-3 py-6 bg-base-100">
                 <h1 className="text-green-900 font-bold text-3xl">
                   {days_since_contact}
@@ -147,7 +137,7 @@ const FriendsDetailsPage = ({ params }) => {
             <div>
               <div className="card w-full shadow-sm px-4 py-6 bg-base-100 space-y-2">
                 <h1 className="font-semibold text-green-900">Quick Check-In</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <Link
                     onClick={() => {
                       handleCallBtn(singleFriend);
