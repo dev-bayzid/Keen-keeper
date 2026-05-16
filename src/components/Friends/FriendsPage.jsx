@@ -1,11 +1,7 @@
 import FriendsCard from "@/components/Friends/FriendsCard";
 import React from "react";
 
-const FriendsPage = async ({friends}) => {
-  // const res = await fetch("http://localhost:3000/data/friends.json");
-  // const friends = await res.json();
-  // // console.log(friends);
-
+const FriendsPage = async ({ friends }) => {
   return (
     <div className="mt-15 space-y-6">
       <h3 className="font-bold text-2xl text-center">Your Friends</h3>

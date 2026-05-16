@@ -1,6 +1,5 @@
-import FriendsPage from "@/components/Friends/FriendsPage";
-import friendsData from "../../../../public/data/data.json"
-
+import friendsData from "../../../../public/data/data.json";
+import Friends from "../friends/page";
 
 const HomePage = async () => {
   // const res = await fetch(
@@ -8,7 +7,7 @@ const HomePage = async () => {
   //   {},
   // );
   const friends = friendsData;
-  console.log(friends);
+  // console.log(friends);
 
   return (
     <div className="min-h-screen py-20 bg-base-300 ">
@@ -67,7 +66,7 @@ const HomePage = async () => {
           </div>
         </div>
       </div>
-      <FriendsPage friends={friends}></FriendsPage>
+      <Friends friends={friends}></Friends>
     </div>
   );
 };
