@@ -1,12 +1,17 @@
+import Link from "next/link";
+
 const FriendsCard = ({ friend }) => {
-  const { name, picture, days_since_contact, tags, status } = friend;
+  const { name, id, picture, days_since_contact, tags, status } = friend;
   const statusColor = {
-    "Overdue": "bg-red-500 ",
+    Overdue: "bg-red-500 ",
     "On-Track": "bg-green-800 ",
     "Almost Due": "bg-yellow-500",
   };
   return (
-    <div className="card bg-base-100 shadow-sm space-y-3">
+    <Link
+      href={`/friends/${id}`}
+      className="card bg-base-100 shadow-sm space-y-3"
+    >
       <div className="flex items-center justify-center py-2">
         <img
           src={picture}
@@ -33,7 +38,7 @@ const FriendsCard = ({ friend }) => {
           {status}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
