@@ -10,7 +10,7 @@ import {
   Video,
 } from "lucide-react";
 import Link from "next/link";
-import { use,useContext } from "react";
+import { use, useContext } from "react";
 import { TimelineContext } from "@/context/TimelineProvider";
 
 const FriendsDetailsPage = ({ params }) => {
@@ -41,7 +41,7 @@ const FriendsDetailsPage = ({ params }) => {
     "Almost Due": "bg-yellow-500",
   };
 
-  const { handleCallBtn } = useContext(TimelineContext);
+  const { handleTimeline } = useContext(TimelineContext);
 
   return (
     <div className="min-h-screen  py-20 bg-base-300 ">
@@ -140,7 +140,7 @@ const FriendsDetailsPage = ({ params }) => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   <Link
                     onClick={() => {
-                      handleCallBtn(singleFriend);
+                      handleTimeline("Call", singleFriend);
                     }}
                     href=""
                     className="card w-50 shadow-sm py-4 bg-base-300"
@@ -151,6 +151,9 @@ const FriendsDetailsPage = ({ params }) => {
                     </div>
                   </Link>
                   <Link
+                    onClick={() => {
+                      handleTimeline("Text", singleFriend);
+                    }}
                     href=""
                     className="card w-50 shadow-sm  py-4 bg-base-300"
                   >
@@ -160,6 +163,9 @@ const FriendsDetailsPage = ({ params }) => {
                     </div>
                   </Link>
                   <Link
+                    onClick={() => {
+                      handleTimeline("Video", singleFriend);
+                    }}
                     href=""
                     className="card w-50 shadow-sm py-4 bg-base-300"
                   >

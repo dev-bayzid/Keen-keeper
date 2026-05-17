@@ -6,26 +6,65 @@ import { toast } from "react-toastify";
 export const TimelineContext = createContext();
 
 const TimelineProvider = ({ children }) => {
-  const [timelineFriends, setTimelineFriend] = useState([]);
   const [timeline, setTimeline] = useState([]);
-  const handleCallBtn = (friends) => {
-    console.log(friends);
 
-    const existedFriends = timelineFriends.find((fd) => fd.id === friends.id);
+  const handleTimeline = (type,friends) => {
+    // console.log(friends);
+
+    const existedFriends = timeline.find((fd) => fd.id === friends.id && fd.type === type);
 
     if (!existedFriends) {
-      toast.success("Call with A");
-      setTimelineFriend([timelineFriends, friends]);
-    }
-    else{
-        toast.success("call with A")
+      toast.success(`${friends.type} with ${friends.name}`);
+      setTimeline([...timeline, friends,{
+        ...friends, type
+      }]);
+    } else {
+      toast.success(`Text with ${friends.name}`);
     }
   };
 
+  //   const handleCallBtn = (friends) => {
+  //     // console.log(friends);
+
+  //     const existedFriends = timeline.find((fd) => fd.id === friends.id);
+
+  //     if (!existedFriends) {
+  //       toast.success(`Call with ${friends.name}`);
+  //       setTimeline([...timeline, friends]);
+  //     } else {
+  //       toast.success(`Call with ${friends.name}`);
+  //     }
+  //   };
+
+  //   const handleTextBtn = (friends) => {
+  //     // console.log(friends);
+
+  //     const existedFriends = timeline.find((fd) => fd.id === friends.id);
+
+  //     if (!existedFriends) {
+  //       toast.success(`Text with ${friends.name}`);
+  //       setTimeline([...timeline, friends]);
+  //     } else {
+  //       toast.success(`Text with ${friends.name}`);
+  //     }
+  //   };
+  //   const handleVideoBtn = (friends) => {
+  //     // console.log(friends);
+
+  //     const existedFriends = timeline.find((fd) => fd.id === friends.id);
+
+  //     if (!existedFriends) {
+  //       toast.success(`Video with ${friends.name}`);
+  //       setTimeline([...timeline, friends]);
+  //     } else {
+  //       toast.success(`Video with ${friends.name}`);
+  //     }
+  //   };
+
   const data = {
-    handleCallBtn,
-    timelineFriends,
-    setTimelineFriend,
+    handleTimeline,
+    timeline,
+    setTimeline,
   };
 
   return (
