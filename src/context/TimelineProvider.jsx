@@ -8,16 +8,22 @@ export const TimelineContext = createContext();
 const TimelineProvider = ({ children }) => {
   const [timeline, setTimeline] = useState([]);
 
-  const handleTimeline = (type,friends) => {
+  const handleTimeline = (type, friends) => {
     // console.log(friends);
 
-    const existedFriends = timeline.find((fd) => fd.id === friends.id && fd.type === type);
+    const existedFriends = timeline.find(
+      (fd) => fd.id === friends.id && fd.type === type,
+    );
 
     if (!existedFriends) {
-      toast.success(`${friends.type} with ${friends.name}`);
-      setTimeline([...timeline, friends,{
-        ...friends, type
-      }]);
+      toast.success(`${type} with ${friends.name}`);
+      setTimeline([
+        ...timeline,
+        {
+          ...friends,
+          type,
+        },
+      ]);
     } else {
       toast.success(`Text with ${friends.name}`);
     }
