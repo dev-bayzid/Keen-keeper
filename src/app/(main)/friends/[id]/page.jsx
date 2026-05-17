@@ -36,7 +36,7 @@ const FriendsDetailsPage = ({ params }) => {
   } = singleFriend;
 
   const statusColor = {
-    Overdue: "bg-red-500 ",
+    "Overdue": "bg-red-500 ",
     "On-Track": "bg-green-800 ",
     "Almost Due": "bg-yellow-500",
   };

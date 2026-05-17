@@ -1,11 +1,10 @@
-"use client"
+"use client";
 import TimelineHistory from "@/components/TimeLineHistory/TimelineHistory";
 import { TimelineContext } from "@/context/TimelineProvider";
 import { useContext } from "react";
 
 const TimelinePage = () => {
-
-  const {timeline} = useContext(TimelineContext);
+  const { timeline } = useContext(TimelineContext);
   console.log(timeline);
 
   return (
@@ -24,9 +23,9 @@ const TimelinePage = () => {
           </label>
         </div>
       </div>
-      {
-        timeline.map((friend, ind) => <TimelineHistory key={ind}></TimelineHistory>)
-      }
+      {timeline.map((friend, ind) => (
+        <TimelineHistory key={ind} friend={friend}></TimelineHistory>
+      ))}
     </div>
   );
 };
