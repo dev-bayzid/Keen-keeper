@@ -4,13 +4,13 @@ const Footer = () => {
   return (
     <footer className="footer footer-horizontal footer-center bg-[#244D3F] text-white p-10">
       <nav className="space-y-3">
-        <nav className="space-y-2">
+        <div className="space-y-2">
           <h1 className="font-bold text-6xl">KeenKeeper</h1>
           <p className="text-gray-100">
             Your personal shelf of meaningful connections. Browse, tend, and
             nurture the relationships that matter most.
           </p>
-        </nav>
+        </div>
         <div>
           <p className="font-bold">Social Links</p>
         </div>
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </nav>
       {/* <hr className="w-full"/> */}
-      <div className="flex justify-between gap-60 text-gray-300 font-light border-t border-green-800">
+      <div className="flex-col md:flex-row justify-between text-gray-300 font-light border-t border-green-800">
         <div className="py-2">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
         </div>
