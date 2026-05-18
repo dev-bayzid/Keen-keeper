@@ -3,13 +3,24 @@ import FriendsCard from "@/components/Friends/FriendsCard";
 import React, { useEffect, useState } from "react";
 import { HashLoader } from "react-spinners";
 
-const FriendsPage = ({ friends }) => {
+const FriendsPage = () => {
+  const [friends, setFriends] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 600);
-    return () => clearTimeout(timer);
+    const fetchData = async () => {
+      const res = await fetch("/data/data.json");
+      const data = await res.json();
+
+      setTimeout(() => {
+        setFriends(data);
+        setLoading(false);
+      }, 1200);
+    };
+
+    fetchData();
   }, []);
+  console.log(friends, loading);
 
   if (loading) {
     return (
@@ -18,7 +29,6 @@ const FriendsPage = ({ friends }) => {
       </div>
     );
   }
-
 
   return (
     <div className="mt-15 space-y-6">
