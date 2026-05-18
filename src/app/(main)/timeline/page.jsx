@@ -7,6 +7,8 @@ const TimelinePage = () => {
   const { timeline } = useContext(TimelineContext);
   console.log(timeline);
 
+  
+
   return (
     <div className="min-h-screen bg-base-300 py-20">
       <div className="container mx-auto space-y-6">

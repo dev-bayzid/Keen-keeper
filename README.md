@@ -7,15 +7,10 @@ It helps users maintain meaningful relationships by tracking communication histo
 
 ## 🌐 Live Website
 
-🔗 Live Link: https://your-live-site-link.vercel.app
+🔗 Live Link: https://keen-keeper-ten-puce.vercel.app/
 
 ---
 
-## 📂 GitHub Repository
-
-🔗 Client Repository: https://github.com/your-username/keenkeeper
-
----
 
 # ✨ Features
 

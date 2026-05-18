@@ -18,10 +18,7 @@ const FriendsDetailsPage = ({ params }) => {
 
   const { id } = use(params);
   const singleFriend = friends.find((friend) => friend.id == id);
-  // console.log(singleFriend);
-
-  // console.log(id);
-  // console.log(singleFriend);
+ 
 
   const {
     name,

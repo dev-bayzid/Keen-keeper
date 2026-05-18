@@ -2,14 +2,41 @@
 
 import { TimelineContext } from "@/context/TimelineProvider";
 import { useContext } from "react";
-import { Legend, Pie, PieChart, Tooltip } from "recharts";
+import { Cell, Legend, Pie, PieChart, Tooltip } from "recharts";
 
 const StatsPage = () => {
-  const data = [
-    { name: "Call", value: 200, fill: "#7E35E1" },
-    { name: "Text", value: 300, fill: "#244D3F" },
-    { name: "Video", value: 300, fill: "#37A163" },
-  ];
+  const { timeline } = useContext(TimelineContext);
+
+  const chartData = Object.values(
+    timeline.reduce((acc, item) => {
+      acc[item.type] = acc[item.type] || { name: item.type, value: 0 };
+
+      acc[item.type].value += 1;
+
+      return acc;
+    }, {}),
+  );
+
+  const COLOR_MAP = {
+    Call: "#7E35E1",
+
+    Text: "#244D3F",
+
+    Video: "#37A163",
+  };
+
+  if (!timeline || timeline.length === 0) {
+    return (
+      <div className="min-h-screen bg-base-300 flex items-center justify-center px-4">
+        <div className="text-center space-y-2">
+          <h2 className="text-2xl font-bold text-gray-700">No Data Found</h2>
+          <p className="text-gray-500">
+            Start adding interactions to see your analytics.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-base-300 py-10 md:py-20 px-4">
@@ -31,7 +58,7 @@ const StatsPage = () => {
                 responsive
               >
                 <Pie
-                  data={data}
+                  data={chartData}
                   innerRadius={70}
                   outerRadius={120}
                   cornerRadius={10}
@@ -39,7 +66,11 @@ const StatsPage = () => {
                   paddingAngle={5}
                   dataKey="value"
                   isAnimationActive={true}
-                ></Pie>
+                >
+                  {chartData.map((entry) => (
+                    <Cell key={entry.name} fill={COLOR_MAP[entry.name]} />
+                  ))}
+                </Pie>
 
                 <Legend></Legend>
                 <Tooltip></Tooltip>

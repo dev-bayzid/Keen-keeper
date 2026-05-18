@@ -1,11 +1,5 @@
-// import FriendsPage from "@/components/Friends/FriendsPage";
-
 const Friends = ({ friends }) => {
-  return (
-    <div>
-      {/* <FriendsPage friends={friends}></FriendsPage> */}
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Friends;
