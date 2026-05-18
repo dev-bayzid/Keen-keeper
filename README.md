@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🫂 KeenKeeper — Friendship Relationship Tracker
 
-## Getting Started
+KeenKeeper is a modern friendship tracking web application built with Next.js, React, and Tailwind CSS.  
+It helps users maintain meaningful relationships by tracking communication history, upcoming contact goals, and interaction analytics.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Live Website
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 Live Link: https://your-live-site-link.vercel.app
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 GitHub Repository
 
-## Learn More
+🔗 Client Repository: https://github.com/your-username/keenkeeper
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# ✨ Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### ✅ Friendship Management
+- View all friends in a responsive card layout
+- Track days since last contact
+- Relationship status indicators:
+  - 🔴 Overdue
+  - 🟡 Almost Due
+  - 🟢 On-Track
 
-## Deploy on Vercel
+### ✅ Timeline Interaction System
+- Log interactions instantly:
+  - 📞 Call
+  - 💬 Text
+  - 🎥 Video
+- Automatic timeline history generation
+- Toast notifications after every interaction
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ✅ Friendship Analytics
+- Interactive Pie Chart using Recharts
+- Visualize Call/Text/Video activity ratios
+- Timeline filtering by interaction type
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ✅ Fully Responsive Design
+- Optimized for:
+  - 📱 Mobile
+  - 📲 Tablet
+  - 💻 Desktop
+
+### ✅ Modern UI/UX
+- Figma-inspired clean design
+- Dynamic active navbar links
+- Loading animations
+- Custom status colors
+- Beautiful dashboard cards
+
+---
+
+# 🛠️ Technologies Used
+
+## Frontend
+- Next.js
+- React.js
+- Tailwind CSS
+- DaisyUI
+
+## State Management
+- React Context API
+
+## Data Visualization
+- Recharts
+
+## Notifications
+- React Toastify
+
+## Icons
+- Lucide React
+
+---
+
+# 📸 Pages Overview
+
+## 🏠 Home Page
+- Hero Banner
+- Summary Cards
+- Friend Cards Grid
+- Responsive Navbar & Footer
+
+## 👤 Friend Details Page
+- Detailed friend profile
+- Relationship goal section
+- Quick check-in buttons
+- Timeline interaction logger
+
+## 📜 Timeline Page
+- Full interaction history
+- Timeline filters
+- Call/Text/Video icons
+
+## 📊 Stats Page
+- Friendship analytics
+- Pie chart visualization
+
+## ❌ 404 Page
+- Custom not found page for invalid routes
+
+
+---
+
+
+
+
+
+# 👨‍💻 Developer
+
+Made with ❤️ by Hasan
+
+---
+
+# 📄 License
+
+This project is created for educational purposes.

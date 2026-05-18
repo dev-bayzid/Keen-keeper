@@ -11,24 +11,24 @@ const HomePage = async () => {
   // console.log(friends);
 
   return (
-    <div className="min-h-screen py-20 bg-base-300 ">
+    <div className="min-h-screen py-10 md:py-16 lg:py-20 px-4 bg-base-300 ">
       <div>
         {/* title & description */}
         <div className="text-center space-y-5">
-          <h1 className="font-bold text-6xl">
+          <h1 className="font-bold text-3xl md:text-5xl lg:text-6xl">
             Friends to keep close in your life
           </h1>
-          <p className="font-light text-gray-500">
+          <p className="font-light text-gray-500 max-w-2xl mx-auto text-sm md:text-base px-2">
             Your personal shelf of meaningful connections. Browse, tend, and
-            nurture the <br /> relationships that matter most.
+            nurture the relationships that matter most.
           </p>
-          <button className="btn bg-[#244D3F] text-white">
+          <button className="btn bg-[#244D3F] text-white w-full sm:w-auto">
             + Add a Friends
           </button>
         </div>
         {/* banner cards */}
-        <div className="flex flex-col md:flex-row justify-center gap-4 mt-8 ">
-          <div className="w-50 text-center bg-white shadow-sm rounded-md">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 max-w-6xl mx-auto">
+          <div className="w-full text-center bg-white shadow-sm rounded-md">
             <div className="card-body">
               <p className="text-xl font-bold text-[#244D3F]">
                 {friends.length}
@@ -36,7 +36,7 @@ const HomePage = async () => {
               <p className="text-gray-500">Total Friends</p>
             </div>
           </div>
-          <div className="w-50 text-center bg-white shadow-sm rounded-md">
+          <div className="w-full text-center bg-white shadow-sm rounded-md">
             <div className="card-body">
               <p className="text-xl font-bold text-[#244D3F]">
                 {
@@ -47,7 +47,7 @@ const HomePage = async () => {
               <p className="text-gray-500">On Track</p>
             </div>
           </div>
-          <div className="w-50 text-center bg-white shadow-sm rounded-md">
+          <div className="w-full text-center bg-white shadow-sm rounded-md">
             <div className="card-body">
               <p className="text-xl font-bold text-[#244D3F]">
                 {
@@ -59,7 +59,7 @@ const HomePage = async () => {
               <p className="text-gray-500">Need Attention</p>
             </div>
           </div>
-          <div className="w-55 text-center bg-white shadow-sm rounded-md">
+          <div className="w-full text-center bg-white shadow-sm rounded-md">
             <div className="card-body">
               <p className="text-xl font-bold text-[#244D3F]">12</p>
               <p className="text-gray-500">Interactions This Month</p>
