@@ -1,9 +1,9 @@
-import FriendsPage from "@/components/Friends/FriendsPage";
+// import FriendsPage from "@/components/Friends/FriendsPage";
 
 const Friends = ({ friends }) => {
   return (
     <div>
-      <FriendsPage friends={friends}></FriendsPage>
+      {/* <FriendsPage friends={friends}></FriendsPage> */}
     </div>
   );
 };

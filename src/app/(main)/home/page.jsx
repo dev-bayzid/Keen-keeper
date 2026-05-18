@@ -1,5 +1,6 @@
+import FriendsPage from "@/components/Friends/FriendsPage";
 import friendsData from "../../../../public/data/data.json";
-import Friends from "../friends/page";
+// import Friends from "../friends/page";
 
 const HomePage = async () => {
   // const res = await fetch(
@@ -66,7 +67,7 @@ const HomePage = async () => {
           </div>
         </div>
       </div>
-      <Friends friends={friends}></Friends>
+      <FriendsPage friends={friends}></FriendsPage>
     </div>
   );
 };

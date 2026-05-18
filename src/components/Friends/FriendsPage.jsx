@@ -1,7 +1,25 @@
+"use client";
 import FriendsCard from "@/components/Friends/FriendsCard";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { HashLoader } from "react-spinners";
 
-const FriendsPage = async ({ friends }) => {
+const FriendsPage = ({ friends }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        <HashLoader color="#244D3F" size={70} />
+      </div>
+    );
+  }
+
+
   return (
     <div className="mt-15 space-y-6">
       <h3 className="font-bold text-2xl text-center">Your Friends</h3>
