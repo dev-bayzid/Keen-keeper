@@ -12,15 +12,15 @@ const StatsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-base-300">
+    <div className="min-h-screen bg-base-300 py-10 md:py-20 px-4">
       <div className="container mx-auto py-20 space-y-4">
-        <h1 className="text-5xl font-bold">Friendship Analytics</h1>
-        <div className="card container mx-auto lg:card-side bg-base-100 shadow-sm">
+        <h1 className="text-3xl md:text-5xl font-bold">Friendship Analytics</h1>
+        <div className="bg-base-100 rounded-2xl shadow-sm p-6">
           <div className="card-body">
-            <h2 className="font-bold text-green-900 text-xlj">
+            <h2 className="font-bold text-xl md:text-2xl text-green-900 mb-6">
               By Interaction Type
             </h2>
-            <div className="flex justify-center items-center">
+            <div className="w-full max-w-xl mx-auto aspect-square">
               <PieChart
                 style={{
                   width: "100%",
@@ -32,10 +32,9 @@ const StatsPage = () => {
               >
                 <Pie
                   data={data}
-                  innerRadius="80%"
-                  outerRadius="100%"
-                  // Corner radius is the rounded edge of each pie slice
-                  cornerRadius="80%"
+                  innerRadius={70}
+                  outerRadius={120}
+                  cornerRadius={10}
                   // padding angle is the gap between each pie slice
                   paddingAngle={5}
                   dataKey="value"

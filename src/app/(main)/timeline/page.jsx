@@ -12,12 +12,15 @@ const TimelinePage = () => {
       <div className="container mx-auto space-y-6">
         <h1 className="text-3xl font-bold text-start">Timeline</h1>
         <div>
-          <label className="select">
+          <label className="select ">
             <span className="label">Filter Timeline</span>
-            <select>
-              <option> </option>
+            <select className="select select-bordered w-full md:w-52">
+              <option value="">All</option>
+
               <option>Text</option>
+
               <option>Call</option>
+
               <option>Video</option>
             </select>
           </label>

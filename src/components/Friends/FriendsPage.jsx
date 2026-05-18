@@ -31,9 +31,9 @@ const FriendsPage = () => {
   }
 
   return (
-    <div className="mt-15 space-y-6">
-      <h3 className="font-bold text-2xl text-center">Your Friends</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 container mx-auto">
+    <div className="mt-16 space-y-6">
+      <h3 className="font-bold text-2xl md:text-3xl text-center">Your Friends</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl container mx-auto px-4">
         {friends.map((friend) => (
           <FriendsCard key={friend.id} friend={friend}></FriendsCard>
         ))}
